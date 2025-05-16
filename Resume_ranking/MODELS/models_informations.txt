@@ -1,0 +1,55 @@
+Both the model size are big. so go and verify the spacy and huggingface documentation for model training
+------------------------------------------------------------------------------------------------------
+
+Model Name: Custom spaCy Transformer Model (en_core_web_trf fine-tuned)
+
+Purpose:
+This model is trained to perform Named Entity Recognition (NER) and custom entity extraction specifically for parsing resumes in the context of recruitment. It identifies relevant entities such as skills, education, experience, certifications, roles, and projects from unstructured resume text.
+
+Base Model:
+The model is built on top of spaCy's en_core_web_trf, which internally uses a RoBERTa transformer via HuggingFace. It benefits from strong contextual understanding and is well-suited for domain-specific entity extraction.
+
+
+-----------------------------------------------------------------------
+
+model_description.txt (for all-MiniLM-L6-v2)
+Model Name: all-MiniLM-L6-v2 – Sentence-BERT Model
+
+Purpose:
+This model is used to compute semantic similarity between a candidate's resume and a job description. It converts both texts into dense vector embeddings and then compares them using cosine similarity to evaluate how closely the resume matches the job criteria.
+
+Model Source:
+
+Pretrained and maintained by: sentence-transformers
+
+HuggingFace Model ID: sentence-transformers/all-MiniLM-L6-v2
+
+Technical Details:
+
+Architecture: Distilled version of MiniLM (6 layers, 384 hidden size)
+
+Embedding Size: 384 dimensions
+
+Training Objective: Siamese / Triplet Network with cosine similarity loss
+
+Speed: Extremely fast; suitable for real-time embedding and ranking
+
+Size: ~22 MB (not included in the repository due to GitHub limits)
+
+Why This Model?
+
+Provides a good balance between speed and semantic accuracy
+
+Small enough to run on CPU-based systems
+
+Well-suited for semantic search, ranking, and sentence similarity tasks
+
+Ideal for comparing resume-job description pairs in bulk
+
+How It’s Used in the Project:
+
+Resume and job description are both encoded as vectors using the model
+
+Cosine similarity between these vectors is calculated
+
+
