@@ -1,0 +1,9 @@
+Replace file-based caching with Redis for better performance in a production environment.
+
+import redis
+cache = redis.Redis(host='localhost', port=6379, db=0)
+
+
+Note: 2
+
+for requirement of spacy the spacy and spacy-transformer version should be same which is used while training

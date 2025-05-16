@@ -1,0 +1,25 @@
+pymongo
+python-dotenv
+flask
+werkzeug
+#bson
+datetime
+pymupdf
+python-docx
+flask-cors
+pandas
+spacy
+spacy-transformers
+prettytable
+datetime
+#dateutil
+sentence_transformers
+torch
+numpy
+# pickle
+# multiprocessing
+# logging
+# python -m spacy download en_core_web_trf
+redis
+pytesseract
+pdf2image
