@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap');
+
+:root{
+    --secondary-color: rgb(120, 118, 123);
+    --container-color: #f5f5f5;
+    --voilet-color: #8a2be2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-para{
+    color: var(--secondary-color);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Custom card styling */
+
+#jd-container{
+    margin: 3rem;
+    padding: 1rem;
+}
+
+
+
+.jd-card {
+    background-color: white; /* Darker background for contrast */
+    border: 1px solid black;
+    color: var(--secondary-color);
+}
+
+.card-header {
+    background-color: blueviolet;
+    color: white;
+}
+
+.loading-animation {
+    display: none; /* Hidden by default */
+    position: relative;
+    height: 40px;
+    margin: 0 auto;
+    width: 80px; /* Enough width for the moving circles */
+}
+
+.loading-animation .a {
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border: 4px solid blueviolet;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -40px;
+    border-radius: 50%;
+    background-color: white;
+    animation: move1 1.5s infinite;
+}
+
+@keyframes move1 {
+    50% {
+        left: 40px;
+        z-index: 0;
+    }
+    51% {
+        z-index: 2;
+    }
+    100% {
+        left: -40px;
+        z-index: 2;
+    }
+}
+
+.loading-animation .b {
+    height: 40px;
+    width: 40px;
+    background-color: blueviolet;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    right: 0;
+    border-radius: 50%;
+    animation: move2 1.5s infinite;
+}
+
+@keyframes move2 {
+    50% {
+        left: -40px;
+    }
+    100% {
+        left: 40px;
+    }
+}
+
+
+
+
+/* Ensure consistent card body height */
+.jd-card .card-body {
+    min-height: 200px; /* Adjust based on content */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Limit text height and handle overflow */
+.jd-card .card-text {
+    flex-grow: 1;
+    max-height: 100px; /* Adjust as needed */
+    overflow-y: auto; /* Scroll for long content */
+}
+
+/* Style for card header and title */
+.jd-card .card-header,
+.jd-card .card-title {
+    color: black;
+}
+
+/* Button styling */
+.jd-card .btn-primary {
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+.jd-card .btn-primary:hover {
+    background-color: #8a2be2; /* Lighter purple on hover */
+    border-color: #8a2be2;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
